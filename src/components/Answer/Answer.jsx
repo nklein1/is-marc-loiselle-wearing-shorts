@@ -8,9 +8,17 @@ class Answer extends React.Component {
     super(props);
   }
 
+  isMarkWearingShorts() {
+    let verdict = 'Hell Yeah';
+    if (this.props.isMarkWearingShorts === false) {
+      verdict = 'Nope Nope Nope';
+    }
+    return verdict;
+  }
+
   render() {
     return (
-      <h1>{this.props.areShortsPresent}</h1>
+      <h1>{ this.isMarkWearingShorts() }</h1>
     );
   }
 }
