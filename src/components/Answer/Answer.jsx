@@ -1,27 +1,26 @@
 import React from 'react';
+// import styles from './Answer.module.scss';
 
-import styles from './Answer.module.scss';
-
-class Answer extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  isMarkWearingShorts() {
-    let verdict = 'Hell Yeah';
-    if (this.props.isMarkWearingShorts === false) {
-      verdict = 'Nope Nope Nope';
+const Answer = ({ isMarkWearingShorts, pageType }) => {
+  const renderVerdict = () => {
+    let verdict = isMarkWearingShorts;
+    if (pageType === 'home') {
+      verdict = 'Hell Yeah';
+      if (isMarkWearingShorts === false) {
+        verdict = 'Nope Nope Nope';
+      }
+    } else if (pageType === 'why') {
+      verdict = 'is definitely';
+      if (isMarkWearingShorts === false) {
+        verdict = "probably isn't";
+      }
     }
     return verdict;
   }
-
-  render() {
-    return (
-      <h1>{ this.isMarkWearingShorts() }</h1>
-    );
-  }
-}
+  return (
+    <span> { renderVerdict() } </span>
+  );
+};
 
 export { Answer };
 export default Answer;

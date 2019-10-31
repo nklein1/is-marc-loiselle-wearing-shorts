@@ -23,3 +23,17 @@ export function decideAttire(data) {
   }
   return isMarkWearingShorts;
 }
+
+// Return true if forecast was last updated > 2 hours ago
+export function isForecastOutdated(forecastData) {
+  let toUpdate = true;
+  if (forecastData.dt) {
+    let today = new Date();
+    let lastUpdated = new Date(forecastData.dt * 1000);
+    let hoursSinceLastUpdate = Math.abs(today.getTime() - lastUpdated.getTime()) / 36e5;
+    if (hoursSinceLastUpdate <= 2) {
+      toUpdate = false;
+    }
+  }
+  return toUpdate;
+}

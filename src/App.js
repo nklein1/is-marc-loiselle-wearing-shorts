@@ -5,7 +5,7 @@ import HomePage from './containers/HomePage/HomePage.jsx';
 import WhyPage from './containers/WhyPage/WhyPage.jsx';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
         <BrowserRouter>

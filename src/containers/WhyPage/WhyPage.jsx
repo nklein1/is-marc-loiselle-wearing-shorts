@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
-import { ajaxHelper, decideAttire } from '../../helpers/helpers.js';
+import { ajaxHelper, decideAttire, isForecastOutdated } from '../../helpers/helpers.js';
 import Answer from '../../components/Answer/Answer.jsx';
 import styles from './WhyPage.module.scss';
 
@@ -12,21 +12,19 @@ class WhyPage extends React.Component {
 
     this.state = {
       weather: JSON.parse(sessionStorage.getItem('weather')) || null,
-      temperature: JSON.parse(sessionStorage.getItem('temp')) || null,
+      temp: JSON.parse(sessionStorage.getItem('temp')) || null,
       wind: JSON.parse(sessionStorage.getItem('wind')) || null,
     }
   }
 
   componentDidMount() {
-    // Avoid re-fetching weather data to preserve API usage
-    if (!this.state.weather) {
+    // Avoid re-fetching weather data to reduce API usage
+    if (!this.state.weather || isForecastOutdated(this.state.weather) === true) {
       this.updateForecast();
-    } else {
-      decideAttire(this.state.weather);
     }
   }
 
-  // Save data to Session Storage & React state
+  // Save data to session storage & react state
   saveWeatherData = (data) => {
     const weather = data;
     const temp = data.main.temp_max;
@@ -47,7 +45,6 @@ class WhyPage extends React.Component {
   updateForecast = () => {
     let cityID = '4930956';
     let units = 'imperial';
-    let token = '7edf14d2a1b5c880692392447d6bc828';
     let uri = '?id=' + cityID + '&units=' + units + '&APPID=' + process.env.REACT_APP_API_TOKEN;
     ajaxHelper('GET', uri, this.saveWeatherData, this.errorCallback);
   }
@@ -63,7 +60,7 @@ class WhyPage extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <Grid container className={styles.subContainer} spacing={3}>
+        <Grid container className={styles.subContainer}>
           <Grid item md={10}>
             <h1>Marc Loiselle is a shorts man. He loves his shorts.</h1>
           </Grid>
@@ -73,8 +70,12 @@ class WhyPage extends React.Component {
             </p>
             <p>
               Since the high temperature for today is <strong>{ this.state.temp }°F</strong>,
-              and the max wind speed is weather to be <strong>{ this.state.wind }mph</strong>,
-              Marc Loiselle <strong>{ this.renderVerdict() } wearing shorts</strong>.
+              and the max wind speed is <strong>{ this.state.wind }mph</strong>,
+              Marc Loiselle
+              <strong>
+                <Answer isMarkWearingShorts={ decideAttire(this.state.weather) } pageType={'why'} />
+                wearing shorts
+              </strong>.
             </p>
           </Grid>
           <Grid item md={6}>
