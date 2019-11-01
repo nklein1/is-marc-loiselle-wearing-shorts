@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/is-marc-loiselle-wearing-shorts/static/css/main.786f4f9d.chunk.css",
-    "main.js": "/is-marc-loiselle-wearing-shorts/static/js/main.676da970.chunk.js",
-    "main.js.map": "/is-marc-loiselle-wearing-shorts/static/js/main.676da970.chunk.js.map",
+    "main.css": "/is-marc-loiselle-wearing-shorts/static/css/main.95ac5ee9.chunk.css",
+    "main.js": "/is-marc-loiselle-wearing-shorts/static/js/main.d54ad428.chunk.js",
+    "main.js.map": "/is-marc-loiselle-wearing-shorts/static/js/main.d54ad428.chunk.js.map",
     "runtime-main.js": "/is-marc-loiselle-wearing-shorts/static/js/runtime-main.d8141a1d.js",
     "runtime-main.js.map": "/is-marc-loiselle-wearing-shorts/static/js/runtime-main.d8141a1d.js.map",
-    "static/js/2.782a0f17.chunk.js": "/is-marc-loiselle-wearing-shorts/static/js/2.782a0f17.chunk.js",
-    "static/js/2.782a0f17.chunk.js.map": "/is-marc-loiselle-wearing-shorts/static/js/2.782a0f17.chunk.js.map",
+    "static/js/2.859236c2.chunk.js": "/is-marc-loiselle-wearing-shorts/static/js/2.859236c2.chunk.js",
+    "static/js/2.859236c2.chunk.js.map": "/is-marc-loiselle-wearing-shorts/static/js/2.859236c2.chunk.js.map",
     "index.html": "/is-marc-loiselle-wearing-shorts/index.html",
-    "precache-manifest.cf8eebce2d8d7ba44be6384cc2f29501.js": "/is-marc-loiselle-wearing-shorts/precache-manifest.cf8eebce2d8d7ba44be6384cc2f29501.js",
+    "precache-manifest.356b52254cf074e6d98c98d5c0f6ba92.js": "/is-marc-loiselle-wearing-shorts/precache-manifest.356b52254cf074e6d98c98d5c0f6ba92.js",
     "service-worker.js": "/is-marc-loiselle-wearing-shorts/service-worker.js",
-    "static/css/main.786f4f9d.chunk.css.map": "/is-marc-loiselle-wearing-shorts/static/css/main.786f4f9d.chunk.css.map"
+    "static/css/main.95ac5ee9.chunk.css.map": "/is-marc-loiselle-wearing-shorts/static/css/main.95ac5ee9.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.d8141a1d.js",
-    "static/js/2.782a0f17.chunk.js",
-    "static/css/main.786f4f9d.chunk.css",
-    "static/js/main.676da970.chunk.js"
+    "static/js/2.859236c2.chunk.js",
+    "static/css/main.95ac5ee9.chunk.css",
+    "static/js/main.d54ad428.chunk.js"
   ]
 }
