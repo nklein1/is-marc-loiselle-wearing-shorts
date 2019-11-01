@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 
 import { ajaxHelper, decideAttire, isForecastOutdated } from '../../helpers/helpers.js';
-import Answer from '../../components/Answer/Answer.jsx';
-import styles from './WhyPage.module.scss';
+import Answer from '../../components/answer/answer.jsx';
+import styles from './whypage.module.scss';
 
 class WhyPage extends React.Component {
 
@@ -84,7 +85,7 @@ class WhyPage extends React.Component {
             </p>
           </Grid>
           <Grid item md={12}>
-           <a href="/">Back to Home</a>
+            <Link to="/">Back to Home</Link>
           </Grid>
         </Grid>
       </div>

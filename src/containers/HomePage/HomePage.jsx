@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 
 import { ajaxHelper, decideAttire, isForecastOutdated } from '../../helpers/helpers.js';
-import Answer from '../../components/Answer/Answer.jsx';
-import styles from './HomePage.module.scss';
+import Answer from '../../components/answer/answer.jsx';
+import styles from './homepage.module.scss';
 
 class HomePage extends React.Component {
 
@@ -50,7 +51,7 @@ class HomePage extends React.Component {
             </h1>
           </Grid>
           <Grid item md={12}>
-            <a href="/why">Why?</a>
+            <Link to="/why">Why?</Link>
           </Grid>
         </Grid>
       </div>

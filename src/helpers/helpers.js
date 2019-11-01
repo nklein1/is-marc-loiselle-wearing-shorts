@@ -12,22 +12,26 @@ export function ajaxHelper(method, uri, successCallback) {
 }
 
 export function decideAttire(data) {
-  let temperature = data.main.temp_max;
-  let wind = data.wind.speed;
-  let isMarkWearingShorts = true;
+  if (data && data.main && data.wind) {
+    let temperature = data.main.temp_max;
+    let wind = data.wind.speed;
+    let isMarkWearingShorts = true;
 
-  if (temperature < 40) {
-    isMarkWearingShorts = false;
-  } else if (temperature <= 50 && wind > 15) {
-    isMarkWearingShorts = false;
+    if (temperature < 40) {
+      isMarkWearingShorts = false;
+    } else if (temperature <= 50 && wind > 15) {
+      isMarkWearingShorts = false;
+    }
+    return isMarkWearingShorts;
+  } else {
+    return 'loading';
   }
-  return isMarkWearingShorts;
 }
 
 // Return true if forecast was last updated > 2 hours ago
 export function isForecastOutdated(forecastData) {
   let toUpdate = true;
-  if (forecastData.dt) {
+  if (forecastData && forecastData.dt) {
     let today = new Date();
     let lastUpdated = new Date(forecastData.dt * 1000);
     let hoursSinceLastUpdate = Math.abs(today.getTime() - lastUpdated.getTime()) / 36e5;

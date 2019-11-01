@@ -1,19 +1,17 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Link } from "react-router-dom";
 
-import HomePage from './containers/HomePage/HomePage.jsx';
-import WhyPage from './containers/WhyPage/WhyPage.jsx';
+import HomePage from './containers/homepage/homepage.jsx';
+import WhyPage from './containers/whypage/whypage.jsx';
 import './App.css';
 
 const App = () => {
   return (
     <div className="App">
-        <BrowserRouter>
-          <Switch>
-              <Route exact path='/' component={HomePage} />
-              <Route exact path='/why' component={WhyPage} />
-          </Switch>
-        </BrowserRouter>
+      <HashRouter basename='/is-marc-loiselle-wearing-shorts'>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/why' component={WhyPage} />
+      </HashRouter>
     </div>
   );
 }
