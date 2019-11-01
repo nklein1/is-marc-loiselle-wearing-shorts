@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "49a56601b11cf4823e83af0755df84b7",
+    "revision": "320dc2549835e03687643fa49506a8fc",
     "url": "/is-marc-loiselle-wearing-shorts/index.html"
   },
   {
-    "revision": "32234383a559690c76dd",
+    "revision": "d9e14b644ef4f16126b4",
     "url": "/is-marc-loiselle-wearing-shorts/static/css/main.c458b93c.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/is-marc-loiselle-wearing-shorts/static/js/2.b58caad5.chunk.js"
   },
   {
-    "revision": "32234383a559690c76dd",
-    "url": "/is-marc-loiselle-wearing-shorts/static/js/main.63cdaa0a.chunk.js"
+    "revision": "d9e14b644ef4f16126b4",
+    "url": "/is-marc-loiselle-wearing-shorts/static/js/main.4df8b67e.chunk.js"
   },
   {
     "revision": "4d8798817e8941fe678f",
