@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/is-marc-loiselle-wearing-shorts/precache-manifest.6feba1fb895b1aafaddaac18385eda1d.js"
+  "/is-marc-loiselle-wearing-shorts/precache-manifest.62dc79ebaf09102c8060cc84ed0f27df.js"
 );
 
 self.addEventListener('message', (event) => {
