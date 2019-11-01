@@ -22,6 +22,8 @@ class WhyPage extends React.Component {
     // Avoid re-fetching weather data to reduce API usage
     if (!this.state.weather || isForecastOutdated(this.state.weather) === true) {
       this.updateForecast();
+    } else if (!this.state.temp) {
+      this.saveWeatherData(this.state.weather);
     }
   }
 
