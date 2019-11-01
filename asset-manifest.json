@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/is-marc-loiselle-wearing-shorts/static/css/main.182773c5.chunk.css",
-    "main.js": "/is-marc-loiselle-wearing-shorts/static/js/main.862e6a0e.chunk.js",
-    "main.js.map": "/is-marc-loiselle-wearing-shorts/static/js/main.862e6a0e.chunk.js.map",
+    "main.js": "/is-marc-loiselle-wearing-shorts/static/js/main.1f4afad9.chunk.js",
+    "main.js.map": "/is-marc-loiselle-wearing-shorts/static/js/main.1f4afad9.chunk.js.map",
     "runtime-main.js": "/is-marc-loiselle-wearing-shorts/static/js/runtime-main.d8141a1d.js",
     "runtime-main.js.map": "/is-marc-loiselle-wearing-shorts/static/js/runtime-main.d8141a1d.js.map",
     "static/js/2.859236c2.chunk.js": "/is-marc-loiselle-wearing-shorts/static/js/2.859236c2.chunk.js",
     "static/js/2.859236c2.chunk.js.map": "/is-marc-loiselle-wearing-shorts/static/js/2.859236c2.chunk.js.map",
     "index.html": "/is-marc-loiselle-wearing-shorts/index.html",
-    "precache-manifest.02c5bdadaedd231f875fef162efacc19.js": "/is-marc-loiselle-wearing-shorts/precache-manifest.02c5bdadaedd231f875fef162efacc19.js",
+    "precache-manifest.55a3b5f64c532e11909095d0fc6b9b9f.js": "/is-marc-loiselle-wearing-shorts/precache-manifest.55a3b5f64c532e11909095d0fc6b9b9f.js",
     "service-worker.js": "/is-marc-loiselle-wearing-shorts/service-worker.js",
     "static/css/main.182773c5.chunk.css.map": "/is-marc-loiselle-wearing-shorts/static/css/main.182773c5.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.d8141a1d.js",
     "static/js/2.859236c2.chunk.js",
     "static/css/main.182773c5.chunk.css",
-    "static/js/main.862e6a0e.chunk.js"
+    "static/js/main.1f4afad9.chunk.js"
   ]
 }
