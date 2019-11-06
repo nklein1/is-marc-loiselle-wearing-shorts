@@ -29,19 +29,20 @@ class WhyPage extends React.Component {
 
   // Save data to session storage & react state
   saveWeatherData = (data) => {
-    const weather = data;
-    const temp = data.main.temp_max;
-    const wind = data.wind.speed;
+    if (data && data.main && data.wind) {
+      const temp = Math.round(data.main.temp_max);
+      const wind = Math.round(data.wind.speed);
 
-    sessionStorage.setItem('weather', JSON.stringify(data));
-    sessionStorage.setItem('temp', JSON.stringify(temp));
-    sessionStorage.setItem('wind', JSON.stringify(wind));
+      sessionStorage.setItem('weather', JSON.stringify(data));
+      sessionStorage.setItem('temp', JSON.stringify(temp));
+      sessionStorage.setItem('wind', JSON.stringify(wind));
 
-    this.setState({
-      weather: weather,
-      temp: temp,
-      wind: wind
-    });
+      this.setState({
+        weather: data,
+        temp: temp,
+        wind: wind
+      });
+    }
   }
 
   // Leaving these here so we can allow them to be customized by the user later
@@ -69,11 +70,11 @@ class WhyPage extends React.Component {
           </Grid>
           <Grid item md={8}>
             <p>
-              And he wears shorts on nearly any day where the temperature is either higher than <strong>40°F</strong> OR higher than <strong>50°F</strong> if the wind speed is <strong>> 15mph</strong>.
+              And he wears shorts on nearly any day where the temperature is either higher than <strong>40°F</strong> OR higher than <strong>50°F</strong> if the wind speed is <strong>>10 mph</strong>.
             </p>
             <p>
               Since the high temperature for today is <strong>{ this.state.temp }°F</strong>,
-              and the max wind speed is <strong>{ this.state.wind }mph</strong>,
+              and the max wind speed is <strong>{ this.state.wind } mph</strong>,
               Marc Loiselle
               <strong>
                 <Answer isMarkWearingShorts={ decideAttire(this.state.weather) } pageType={'why'} />

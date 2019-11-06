@@ -19,7 +19,7 @@ export function decideAttire(data) {
 
     if (temperature < 40) {
       isMarkWearingShorts = false;
-    } else if (temperature <= 50 && wind > 15) {
+    } else if (temperature <= 50 && wind > 10) {
       isMarkWearingShorts = false;
     }
     return isMarkWearingShorts;
